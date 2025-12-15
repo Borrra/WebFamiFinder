@@ -1,0 +1,30 @@
+# Ignore compiled binaries
+/bin/
+
+# Maven target directory
+/target/
+
+# Eclipse settings
+/.settings/
+
+# IDE specific files
+.idea/
+*.iml
+*.class
+*.classpath
+*.project
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Other files to ignore
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.tar.bz2

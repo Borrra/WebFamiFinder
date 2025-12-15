@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<!-- 1. Это Фейслет с которого начинается мое веб-приложение. Он "рисует" форму
+ввода Логина и Пароля. Псоле того как введи Логин и Пароль, нажимаем либо Enter,
+либо кнопку Safe и переходип по ссылке уже на мой Сервлет FirstServlet -->
+
+<!-- Заголовок моей Приветственной страницы -->
+<h:head>
+    <title>Greeting Page</title>
+</h:head>
+
+<h:body>
+    <h:form>
+
+        <!--Здесь мы водим данные в наш Бин: поля login и password   -->
+        Loing: <h:inputText value="#{helloBean.login}" />
+        <br/>
+        <br/>
+        Password: <h:inputText value="#{helloBean.password}" />
+        <br/>
+        <br/>
+
+        <!--Это конопка "Save" которая вроде ничего не делает, но
+          данные реально сохраняются -->
+        <h:commandButton value="Save" />
+
+    </h:form>
+
+    <!-- Это ссылка на мой сервлет FirstServlet, где проверяются (т.е. используются
+     данные бина, введенные здесь -->
+
+    <br/><a href='hello'>See the Resoult</a>
+    <br/>
+
+</h:body>
+
+</html>

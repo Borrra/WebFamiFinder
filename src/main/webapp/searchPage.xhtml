@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<!-- 3. Это второй Фейслет моего приложения, сюда мы попадаем по ссылке из FirstServlet
+при условии, что на начальной странице ввели правильный Логин-Пароль,увидели
+полную Таблицу Игр и нажали на ссыку 'Go to Search panel' -->
+
+<!-- Здесь мы увидем поле для ввода слова по которому мы хотим отсортировать
+ полную Таблицу Игр и при вводе слова и нажатии на ссылку 'See the Resoult'
+ мы перейдем на следующий (второй) Сервлет FindServlet, где увидим результат
+ поиска -->
+
+<h:head>
+    <title>Search Page</title>
+</h:head>
+
+<h:body>
+    <h:form>
+
+        <br/>
+
+        <!--Здесь мы водим данные в наш Бин   -->
+        What to Find: <h:inputText value="#{helloBean.search}" />
+        <br/>
+        <br/>
+        <!--Это конопка "Save" которая вроде ничего не делает, но
+          данные реально сохраняются -->
+        <h:commandButton value="Safe" />
+
+    </h:form>
+
+    <!-- Это ссылка на мой сервлет, где проверяются (т.е. используются
+     данные бина, введенные здесь -->
+    <br/><a href='find'>See the Resoult</a>
+
+</h:body>
+
+
+</html>
